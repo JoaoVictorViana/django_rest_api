@@ -59,7 +59,6 @@ class ClientSerializer(serializers.HyperlinkedModelSerializer):
         model = Client
         fields = ['first_name', 'last_name', 'idade', 'sexo']
 
-# ViewSets define the view behavior.
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
